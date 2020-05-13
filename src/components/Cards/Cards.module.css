@@ -6,7 +6,7 @@
   }
   
   .card {
-    margin: 0 2% !important;
+    margin: 0 3% !important;
   }
   
   .infected {
@@ -24,7 +24,7 @@
     border-radius: 20%;
   }
   
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 800px) {
     .card {
       margin: 2% 0 !important;
     }

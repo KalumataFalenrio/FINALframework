@@ -7,7 +7,7 @@ import styles from './Cards.module.css';
 
 const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
-    return 'Loading...';
+    return ' ';
   }
 
   return (
@@ -19,7 +19,11 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               Positif
             </Typography>
             <Typography variant="h5" component="h2">
-              <CountUp start={0} end={confirmed.value} duration={2.5} separator="," />
+              <CountUp 
+              start={0} 
+              end={confirmed.value} 
+              duration={2.5} 
+              separator="," />
             </Typography>
             <Typography color="textSecondary">
               {new Date(lastUpdate).toDateString()}
@@ -35,7 +39,11 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               Sembuh
             </Typography>
             <Typography variant="h5" component="h2">
-              <CountUp start={0} end={recovered.value} duration={2.5} separator="," />
+              <CountUp 
+              start={0} 
+              end={recovered.value} 
+              duration={2.5} 
+              separator="," />
             </Typography>
             <Typography color="textSecondary">
               {new Date(lastUpdate).toDateString()}
@@ -51,12 +59,16 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               Kematian
             </Typography>
             <Typography variant="h5" component="h2">
-              <CountUp start={0} end={deaths.value} duration={2.5} separator="," />
+              <CountUp 
+              start={0} 
+              end={deaths.value} 
+              duration={2.5} 
+              separator="," />
             </Typography>
             <Typography color="textSecondary">
               {new Date(lastUpdate).toDateString()}
             </Typography>
-            <Typography variant="body2" component="p">
+            <Typography variant="body3" component="p">
               Total kasus Kematian COVID-19.
             </Typography>
           </CardContent>
